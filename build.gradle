@@ -1,0 +1,22 @@
+plugins {
+    id "java"
+    id "checkstyle"
+    id "pmd"
+    id "findbugs"
+    id "jacoco"
+    id "net.ltgt.errorprone" version "0.0.8"
+}
+
+apply from: 'gradle/check.gradle'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Add Guava dependency here
+    testCompile "junit:junit:4.11"
+    testCompile "org.hamcrest:hamcrest-all:1.3"
+}
+
+

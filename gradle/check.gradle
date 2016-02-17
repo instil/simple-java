@@ -1,0 +1,13 @@
+configurations.errorprone {
+    resolutionStrategy.force "com.google.errorprone:error_prone_core:2.0.8"
+}
+
+jacoco {
+    toolVersion "0.7.5.201505241946"
+}
+
+findbugs {
+    sourceSets = [sourceSets.main, sourceSets.test]
+    includeFilter = file("config/findbugs/includeFilter.xml")
+    excludeFilter = file("config/findbugs/excludeFilter.xml")
+}
